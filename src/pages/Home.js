@@ -1,32 +1,36 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { connect } from "react-redux";
-import { addMovies } from "../modules";
-import { data } from "../utility/constant";
+import { Link } from "react-router-dom";
+import { getHabit } from "../action";
+import styles from "../styles/home.module.css";
+import { HabitList } from "../components";
 
 const Home = (props) => {
-  console.log("home");
-  const { addMovies, movies } = props;
+  const { getHabit, habits } = props;
 
   useEffect(() => {
-    addMovies(data);
-  }, [addMovies]);
+    getHabit();
+  }, [getHabit]);
 
   useEffect(() => {
-    console.log(movies, "store");
-  }, [movies]);
+    console.log("habits", habits);
+  }, [habits]);
 
   return (
-    <div className="Home">
-      <h1>Home</h1>
+    <div className={styles.home}>
+      <HabitList habits={habits} />
+      <Link to="/addhabit">
+        <button className={styles.floatingButton}>+</button>
+      </Link>
     </div>
   );
 };
-
+// Access state from Store.
 const mapStateToProps = (state) => ({
-  movies: state.addMovies.movies,
+  habits: state.habitReducer.habits,
 });
 
 const mapDispatchToProps = {
-  addMovies,
+  getHabit,
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

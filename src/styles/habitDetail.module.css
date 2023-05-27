@@ -1,0 +1,62 @@
+.habitDetail::-webkit-fill-available {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardContainer {
+  display: block;
+  flex-direction: column;
+  background: #fff;
+  padding: 10px 30px;
+  border-radius: 6px;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 70%;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.habitTile {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 24px;
+  color: "black";
+}
+.parentStatus {
+  display: flex;
+  justify-content: space-between;
+}
+.btnGrp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.habitDetail button {
+  border-radius: 6px;
+  padding: 10px;
+  width: fit-content;
+  font-size: 16px;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+.habitDetail button:hover {
+  cursor: pointer;
+}
+.habitDetail button:focus {
+  outline: none;
+}
+
+.habitDetail .saveBtn {
+  background: #bd3f3f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+}
+.habitDetail .backBtn {
+  background: #fff;
+  border: 1.5px solid #bd3f3f;
+  color: #0c0505;
+
+  padding: 10px 20px;
+}

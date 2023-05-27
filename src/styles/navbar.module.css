@@ -1,0 +1,24 @@
+.nav {
+  background: #bd3f3f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+.appIcon {
+  height: 8vh;
+  width: 8vw;
+}
+.resetButton {
+  list-style-type: none;
+  padding: 0 4px;
+  color: #fff;
+}
+ul li {
+  text-decoration: none;
+  color: #fff;
+}
+ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

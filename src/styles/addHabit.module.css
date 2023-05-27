@@ -1,0 +1,71 @@
+.addhabit::-webkit-fill-available {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardContainer {
+  display: block;
+  flex-direction: column;
+  background: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 40%;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.addhabit.field {
+  margin-bottom: 10px;
+}
+.addhabit .field .fieldLabel {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #9e9e9e;
+  padding: 5px 0;
+}
+.addhabit .field input {
+  margin-top: 6px;
+  width: 100%;
+  height: 35px;
+  font-size: 16px;
+  padding-left: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+}
+.addhabit .btnGrp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.addhabit button {
+  border-radius: 6px;
+  padding: 10px;
+  width: fit-content;
+  font-size: 16px;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+.addhabit button:hover {
+  cursor: pointer;
+}
+.addhabit button:focus {
+  outline: none;
+}
+
+.addhabit .saveBtn {
+  background: #bd3f3f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+}
+
+.addhabit .backBtn {
+  background: #fff;
+  border: 1.5px solid #bd3f3f;
+  color: #0c0505;
+  padding: 10px 20px;
+}

@@ -13,7 +13,6 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: #bd3f3f;
 }
 
 /* LOADER */

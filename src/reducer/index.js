@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import addMovies from "../modules/addMovie";
+import habitReducer from "./habbit";
 
-const AppReducer = combineReducers({ addMovies });
+const AppReducer = combineReducers({ habitReducer });
 export default AppReducer;
