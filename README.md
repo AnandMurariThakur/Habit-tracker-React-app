@@ -6,8 +6,6 @@ Problem statement
 
 #
 
-<!-- - Initialize the app and added required package and define our intial foldering -->
-
 # Habit Tracker App
 
 The Habit Tracker App is a web application that allows users to track their daily habits. Users can add, update, and delete habits. This application is built using React and Redux for state management.
