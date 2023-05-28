@@ -9,12 +9,9 @@ const Home = (props) => {
   const { getHabit, habits } = props;
 
   useEffect(() => {
+    // Fetch habits when the component mounts
     getHabit();
   }, [getHabit]);
-
-  useEffect(() => {
-    console.log("habits", habits);
-  }, [habits]);
 
   return (
     <div className={styles.home}>
@@ -25,6 +22,7 @@ const Home = (props) => {
     </div>
   );
 };
+
 // Access state from Store.
 const mapStateToProps = (state) => ({
   habits: state.habitReducer.habits,
@@ -33,4 +31,5 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
   getHabit,
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

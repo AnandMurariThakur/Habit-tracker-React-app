@@ -1,42 +1,47 @@
+/* Global styles for the body */
 body {
-  margin: 0;
+  margin: 0; /* Remove margin */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #f1f1f1;
+    sans-serif; /* Font family */
+  -webkit-font-smoothing: antialiased; /* Font smoothing for better rendering on WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Font smoothing for better rendering on macOS */
+  background: #f1f1f1; /* Background color */
 }
 
-/* Styling to our root File */
+/* Styles for the root element */
 .App {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  flex: 1; /* Grow and shrink to fill available space */
+  display: flex; /* Display as a flex container */
+  flex-direction: column; /* Arrange children in a column */
 }
 
-/* LOADER */
+/* Styles for the app spinner/loader */
 .app-spinner {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border: 3px solid #d6d6d6;
-  border-radius: 50%;
-  border-top-color: #bd3f3f;
-  animation: spin 1s linear infinite;
-  -webkit-animation: spin 1s linear infinite;
-  margin-right: 10px;
-  position: absolute;
-  top: 45%;
-  left: 50%;
+  display: inline-block; /* Display as an inline block element */
+  width: 50px; /* Set the width */
+  height: 50px; /* Set the height */
+  border: 3px solid #d6d6d6; /* Border styles */
+  border-radius: 50%; /* Border radius for a circular shape */
+  border-top-color: #bd3f3f; /* Color of the top border */
+  animation: spin 1s linear infinite; /* Animation properties */
+  -webkit-animation: spin 1s linear infinite; /* WebKit-specific animation properties */
+  margin-right: 10px; /* Right margin */
+  position: absolute; /* Positioning */
+  top: 45%; /* Position from the top */
+  left: 50%; /* Position from the left */
 }
+
+/* Keyframes for the spinner animation */
 @keyframes spin {
   to {
-    -webkit-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); /* Rotate the element */
   }
 }
+
+/* WebKit-specific keyframes for the spinner animation */
 @-webkit-keyframes spin {
   to {
-    -webkit-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); /* Rotate the element */
   }
 }

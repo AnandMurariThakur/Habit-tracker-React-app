@@ -1,24 +1,33 @@
+/* Styles for the navigation bar */
 .nav {
-  background: #bd3f3f;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 20px;
+  background: #bd3f3f; /* Background color */
+  display: flex; /* Display items in a row */
+  justify-content: space-between; /* Space items evenly along the horizontal axis */
+  align-items: center; /* Center items vertically */
+  padding: 0px 20px; /* Padding on the left and right sides */
 }
+
+/* Styles for the app icon */
 .appIcon {
-  height: 8vh;
-  width: 8vw;
+  height: 8vh; /* Set the height */
+  width: 8vw; /* Set the width */
 }
+
+/* Styles for the reset button */
 .resetButton {
-  list-style-type: none;
-  padding: 0 4px;
-  color: #fff;
+  list-style-type: none; /* Remove bullet points */
+  padding: 0 4px; /* Padding on the left and right sides */
+  color: #fff; /* Text color */
 }
+
+/* Styles for unordered list items */
 ul li {
-  text-decoration: none;
-  color: #fff;
+  text-decoration: none; /* Remove text decoration */
+  color: #fff; /* Text color */
 }
+
+/* Hover styles for unordered list items */
 ul li:hover {
-  cursor: pointer;
-  text-decoration: underline;
+  cursor: pointer; /* Display a pointer cursor on hover */
+  text-decoration: underline; /* Underline text on hover */
 }

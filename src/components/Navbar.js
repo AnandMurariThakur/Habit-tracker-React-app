@@ -10,10 +10,18 @@ const Navbar = (props) => {
   const navigate = useNavigate();
   const { addToast } = useToasts();
 
+  // Handle the reset action
   const handleReset = () => {
+    // Reset the habit list in Redux store
     resetHabitList();
+
+    // Remove the habit list from local storage
     removeItemFromLocalStorage(HABIT_LIST);
+
+    // Navigate to the root path
     navigate("/");
+
+    // Display a success toast notification
     return addToast("Reset Successfully", {
       appearance: "success",
     });
@@ -21,6 +29,7 @@ const Navbar = (props) => {
 
   return (
     <div className={styles.nav}>
+      {/* Render the app icon with a link to the root path */}
       <div>
         <Link to="/">
           <img
@@ -31,6 +40,7 @@ const Navbar = (props) => {
         </Link>
       </div>
       <ul>
+        {/* Render the reset button */}
         <li className={styles.resetButton} onClick={handleReset}>
           Reset Habit
         </li>
@@ -38,10 +48,13 @@ const Navbar = (props) => {
     </div>
   );
 };
-// Access state from Store.
+
+// Access state from the Redux store.
 const mapStateToProps = (state) => ({});
 
 const mapDispatchToProps = {
   resetHabitList,
 };
+
+// Connect the Navbar component to Redux store.
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

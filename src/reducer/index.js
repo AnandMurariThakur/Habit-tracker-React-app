@@ -1,5 +1,9 @@
 import { combineReducers } from "redux";
-import habitReducer from "./habbit";
+import habitReducer from "./habit";
 
-const AppReducer = combineReducers({ habitReducer });
+// Combine multiple reducers using combineReducers
+const AppReducer = combineReducers({
+  habitReducer, // Add other reducers here if needed
+});
+
 export default AppReducer;

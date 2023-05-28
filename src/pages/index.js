@@ -1,5 +1,5 @@
 import Home from "./Home";
-import AddHabit from "./Addhabit";
+import AddHabit from "./AddHabit";
 import HabitDetail from "./HabitDetail";
 
 export { Home, AddHabit, HabitDetail };

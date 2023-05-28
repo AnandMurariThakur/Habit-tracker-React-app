@@ -1,83 +1,100 @@
+/* Styles for the home container */
 .home::-webkit-fill-available {
-  flex: 1;
-  display: flex;
-  margin-bottom: 30px;
-  /* min-height: 100vh; */
+  flex: 1; /* Grow and shrink to fill available space */
+  display: flex; /* Display as a flex container */
+  margin-bottom: 30px; /* Bottom margin */
+  /* min-height: 100vh; */ /* Uncomment this line if you want to set a minimum height of the viewport */
 }
 
+/* Styles for the floating button */
 .floatingButton {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: #bd3f3f;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-  cursor: pointer;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
+  position: fixed; /* Positioning */
+  bottom: 20px; /* Position from the bottom */
+  right: 20px; /* Position from the right */
+  width: 50px; /* Set the width */
+  height: 50px; /* Set the height */
+  background-color: #bd3f3f; /* Background color */
+  color: #fff; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Border radius for a circular shape */
+  font-size: 24px; /* Font size */
+  cursor: pointer; /* Cursor style */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Box shadow */
+  transition: background-color 0.3s ease; /* Transition effect for background color */
 }
 
+/* Hover styles for the floating button */
 .floatingButton:hover {
-  background-color: #b25454;
+  background-color: #b25454; /* Background color on hover */
 }
 
+/* Focus styles for the floating button */
 .floatingButton:focus {
-  outline: none;
-}
-.cardContainer {
-  display: block;
-  flex-direction: column;
-  background: #fff;
-  padding: 30px;
-  border-radius: 6px;
-  margin: 0 auto;
-  margin-top: 50px;
-  width: 40%;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-.emptyListMessage {
-  display: flex;
-  justify-content: center;
-}
-.fieldLabel {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
-  color: "black";
-}
-.cardList {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  padding: 10px 30px;
-  border-radius: 6px;
-  margin: 0 auto;
-  margin-top: 30px;
-  width: 40%;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-.detailButton {
-  border-radius: 6px;
-  padding: 10px;
-  width: fit-content;
-  font-size: 16px;
-  border-radius: 3px;
-  background: #bd3f3f;
-  color: #fff;
-  border: none;
+  outline: none; /* Remove focus outline */
 }
 
-.detailButton button:hover {
-  cursor: pointer;
+/* Styles for the card container */
+.cardContainer {
+  display: block; /* Display as a block element */
+  flex-direction: column; /* Arrange children in a column */
+  background: #fff; /* Background color */
+  padding: 30px; /* Padding */
+  border-radius: 6px; /* Border radius */
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 50px; /* Top margin */
+  width: 40%; /* Set the width */
+  border-radius: 6px; /* Border radius */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; /* Box shadow */
 }
+
+/* Styles for the empty list message */
+.emptyListMessage {
+  display: flex; /* Display as a flex container */
+  justify-content: center; /* Center horizontally */
+}
+
+/* Styles for the field label */
+.fieldLabel {
+  font-style: normal; /* Normal font style */
+  font-weight: 600; /* Font weight */
+  font-size: 16px; /* Font size */
+  line-height: 22px; /* Line height */
+  color: "black"; /* Text color */
+}
+
+/* Styles for the card list */
+.cardList {
+  display: flex; /* Display as a flex container */
+  justify-content: space-between; /* Space evenly between children */
+  align-items: center; /* Align items vertically */
+  background: #fff; /* Background color */
+  padding: 10px 30px; /* Padding */
+  border-radius: 6px; /* Border radius */
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 30px; /* Top margin */
+  width: 40%; /* Set the width */
+  border-radius: 6px; /* Border radius */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; /* Box shadow */
+}
+
+/* Styles for the detail button */
+.detailButton {
+  border-radius: 6px; /* Border radius */
+  padding: 10px; /* Padding */
+  width: fit-content; /* Set the width based on content */
+  font-size: 16px; /* Font size */
+  border-radius: 3px; /* Border radius */
+  background: #bd3f3f; /* Background color */
+  color: #fff; /* Text color */
+  border: none; /* Remove border */
+}
+
+/* Hover styles for the detail button */
+.detailButton button:hover {
+  cursor: pointer; /* Cursor style on hover */
+}
+
+/* Focus styles for the detail button */
 .detailButton button:focus {
-  outline: none;
+  outline: none; /* Remove focus outline */
 }

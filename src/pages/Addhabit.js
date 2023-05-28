@@ -16,11 +16,14 @@ const AddHabit = (props) => {
 
   const handleHabit = () => {
     if (!habit) {
+      // Display error toast if habit field is empty
       return addToast("Please Enter the Habit", {
         appearance: "error",
       });
     }
     setSavingForm(true);
+
+    // Generate temporary data for the new habit
     let tempData = {
       title: habit,
       id: Math.random() * 1000,
@@ -36,23 +39,30 @@ const AddHabit = (props) => {
       tempArr.push(tempObj);
     }
     tempData.data = tempArr;
+
+    // Dispatch the action to add the new habit
     addHabit(tempData);
+
     setSavingForm(false);
     setHabit("");
     navigate("/");
+
+    // Display success toast after adding the habit
     return addToast("Habit Added Successfully", {
       appearance: "success",
     });
   };
 
-  //method to naviagte back to previous screen
+  // Method to navigate back to the previous screen
   const handleBack = () => {
     navigate("/");
   };
 
   if (savingForm) {
+    // Display loader while saving the form
     return <Loader />;
   }
+
   return (
     <div className={styles.addhabit}>
       <div className={styles.cardContainer}>
@@ -81,9 +91,11 @@ const AddHabit = (props) => {
     </div>
   );
 };
+
 // Access state from Store.
 const mapStateToProps = (state) => ({});
 const mapDispatchToProps = {
   addHabit,
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(AddHabit);

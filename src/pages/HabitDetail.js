@@ -15,19 +15,23 @@ const HabitDetail = (props) => {
   const [savingForm, setSavingForm] = useState(false);
 
   useEffect(() => {
-    const filterdArray = habits.filter(
+    // Filter the habits array to get the detail of the selected habit
+    const filteredArray = habits.filter(
       (habit) => habit.id === parseFloat(detailId)
     );
-    setDetail(filterdArray);
+    setDetail(filteredArray);
   }, [habits, detailId]);
 
   const handleStatusChange = (id) => (event) => {
+    // Update the status of a specific habit detail
     const newDetailData = detail[0].data.map((data) => {
       if (data.id === id) {
         return { ...data, status: event.target.value };
       }
       return data;
     });
+
+    // Update the detail state with the modified data
     let tempArr = [];
     let tempObj = {};
     tempObj.id = detail[0].id;
@@ -39,24 +43,38 @@ const HabitDetail = (props) => {
 
   const handleUpdate = (id) => {
     setSavingForm(true);
+
+    // Create a temporary object with updated habit details
     let tempObj = {};
     tempObj.id = detail[0].id;
     tempObj.title = detail[0].title;
     tempObj.data = detail[0].data;
+
+    // Dispatch the action to update the habit
     updateHabit(id, tempObj);
+
     setSavingForm(false);
+
+    navigate("/");
+
+    // Display success toast after updating the habit
     return addToast("Habit Updated Successfully", {
       appearance: "success",
     });
   };
 
   const handleDelete = (id) => {
+    // Dispatch the action to delete the habit
     deleteHabit(id);
+
     navigate("/");
+
+    // Display success toast after deleting the habit
     return addToast("Habit Deleted Successfully", {
       appearance: "success",
     });
   };
+
   return (
     <div className={styles.habitDetail}>
       {detail.length !== 0 ? (
@@ -105,6 +123,7 @@ const HabitDetail = (props) => {
     </div>
   );
 };
+
 // Access state from Store.
 const mapStateToProps = (state) => ({
   habits: state.habitReducer.habits,
@@ -114,4 +133,5 @@ const mapDispatchToProps = {
   updateHabit,
   deleteHabit,
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(HabitDetail);
