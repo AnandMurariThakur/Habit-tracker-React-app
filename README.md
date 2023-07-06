@@ -1,12 +1,10 @@
-# Contact list React app
+# Habit Tracker App
 
 Problem statement
 
 > - Create a habit tracker app, where we can define habits and track them. Create a react app.
 
 #
-
-# Habit Tracker App
 
 The Habit Tracker App is a web application that allows users to track their daily habits. Users can add, update, and delete habits. This application is built using React and Redux for state management.
 
